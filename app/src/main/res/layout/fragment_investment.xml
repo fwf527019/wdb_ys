@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/base_top" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="产品"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twenty" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_top"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/conduct_financial_transactions"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="投资"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fourteen" />
+
+            <TextView
+                android:id="@+id/transfer_the_possession_of"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="转让"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fourteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/load"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_connetiong" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no"
+            android:layout_centerHorizontal="true"
+            android:text="没网了，请检查网络"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/twenty" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <fragment
+            android:id="@+id/conduct_financial_transactions_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="rxh.hb.fragment.ConductFinancialTransactionsFragment" />
+
+        <fragment
+            android:id="@+id/transfer_the_possession_of_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            class="rxh.hb.fragment.TransferThePossessionOfFragment" />
+    </LinearLayout>
+
+</LinearLayout>

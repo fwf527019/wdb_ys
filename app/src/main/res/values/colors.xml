@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FB6006</color>
+    <color name="colorPrimaryDark">#FB6006</color>
+    <color name="colorAccent">#FB6006</color>
+
+    <color name="action_bar_bg">#0c151c</color>
+    <color name="textcolor">#929396</color>
+    <color name="bgcolor">#F7F7F7</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#F02120</color>
+    <color name="jingdu">#C8C8C8</color>
+    <color name="is_selected">#FB6006</color>
+    <color name="not_selected">#646464</color>
+    <color name="base_top">#FB6006</color>
+    <color name="tab_title_normal_color">#262726</color>
+    <color name="tab_title_pressed_color">#16982b</color>
+    <color name="tab_middle_line_color">#5c882c</color>
+
+    <color name="style_color_primary">#d32f2f</color>
+    <color name="style_color_primary_dark">#b71c1c</color>
+    <color name="style_color_primary_light">#FFCDD2</color>
+    <color name="style_color_accent">#d32f2f</color>
+    <color name="style_window_background">#212121</color>
+    <color name="style_window_background_light">#ffffff</color>
+
+    <color name="google_blue">#4285F4</color>
+    <color name="google_red">#EA4335</color>
+    <color name="google_green">#34A853</color>
+    <color name="google_yellow">#FBBC05</color>
+
+    <color name="yalantis_saffron">#F4B63E</color>
+    <color name="yalantis_eggplant">#663D4E</color>
+    <color name="yalantis_sienna">#EB6460</color>
+</resources>

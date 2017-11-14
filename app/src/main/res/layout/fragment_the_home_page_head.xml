@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F7"
+    android:gravity="clip_vertical"
+    android:orientation="vertical" >
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        class="rxh.hb.fragment.BannerFragment" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/activity_center_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/item_setoer"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/huodongzhongxin" />
+
+                <TextView
+                    android:id="@+id/activity_center_tv"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/rouned_textview" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="活动中心"
+                android:textSize="@dimen/threeteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/news_bulletin_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/item_setoer"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/xinwengonggao" />
+
+                <TextView
+                    android:id="@+id/news_bulletin_tv"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/rouned_textview"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="新闻公告"
+                android:textSize="@dimen/threeteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/platform_repayment_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/item_setoer"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pingtaihuankuan" />
+
+                <TextView
+                    android:id="@+id/platform_repayment_tv"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/rouned_textview" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="平台还款"
+                android:textSize="@dimen/threeteen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/service_centre_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/item_setoer"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/fuwuzhongxin" />
+
+                <TextView
+                    android:id="@+id/service_centre_tv"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/rouned_textview" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="服务中心"
+                android:textSize="@dimen/threeteen" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

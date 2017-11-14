@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_right_tv" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="可用余额"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/cumulative_gain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="2001.30"
+            android:textColor="@color/red"
+            android:textSize="@dimen/fift" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/withdrawals"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/activity_cumulative_gain_rounded_button"
+        android:text="提  现"
+        android:textColor="@color/not_selected"
+        android:textSize="@dimen/sixteen" />
+
+    <Button
+        android:id="@+id/recharge"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/activity_register_rounded_button"
+        android:text="充  值"
+        android:textColor="#fff"
+        android:textSize="@dimen/sixteen" />
+
+</LinearLayout>

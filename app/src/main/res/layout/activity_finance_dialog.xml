@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/activity_main_popwind_round"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="申请贷款成功，请保持电话畅通！我们的工作人员稍后会拨打你的电话详细了解你的资料。"
+        android:textColor="#666666"
+        android:textSize="@dimen/fourteen" />
+
+    <Button
+        android:id="@+id/sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/activity_register_rounded_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="知道了"
+        android:textColor="#fff"
+        android:textSize="@dimen/sixteen" />
+
+</LinearLayout>

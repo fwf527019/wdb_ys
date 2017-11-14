@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_right_tv" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <rxh.hb.view.HPEditText
+                android:id="@+id/bank_card_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="银行卡号"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/bank_of_deposit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="开户银行"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/bank_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="开户支行地址"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/name_of_Bank"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="开户支行名称"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/account_holder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="开户人姓名"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/open_an_account"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="银行预留手机号"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColor="@color/base_top"
+                android:text="(请确认银行卡信息正确,否则可能导致无法收款)"
+                />
+            <Button
+                android:id="@+id/next"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/activity_register_rounded_button"
+                android:text="提交"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

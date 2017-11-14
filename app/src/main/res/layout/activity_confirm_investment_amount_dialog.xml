@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/activity_confirm_investment_amount_pop_window_round"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="余额支付     "
+            android:textSize="@dimen/eighteen" />
+
+        <TextView
+            android:id="@+id/the_amount_paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3000"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/bgcolor" />
+
+    <EditText
+        android:id="@+id/paypassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:hint="请输入支付密码"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:textColor="@color/not_selected"
+        android:textSize="@dimen/sixteen" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/bgcolor" />
+
+    <TextView
+        android:id="@+id/the_facility_is_the_payment_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="20dp"
+        android:text="去设置支付密码>"
+        android:textColor="@color/not_selected"
+        android:textSize="@dimen/sixteen" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/activity_cumulative_gain_rounded_button"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="取消"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/eighteen" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/activity_register_rounded_button"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="确认"
+            android:textColor="#fff"
+            android:textSize="@dimen/eighteen" />
+    </LinearLayout>
+
+</LinearLayout>

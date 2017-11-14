@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wave="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_right_tv" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/head_portrait"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="头像"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <rxh.hb.view.CircleImageView
+                    android:id="@+id/img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img1"
+                    android:src="@drawable/preson"
+                    wave:civ_border_color="#ffffff"
+                    wave:civ_border_width="1dp" />
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/go" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/bgcolor" />
+
+            <RelativeLayout
+                android:id="@+id/nickname"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="会员名"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <TextView
+                    android:id="@+id/nicknametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img2"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/go" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/bgcolor" />
+
+            <RelativeLayout
+                android:id="@+id/account"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="绑定手机"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <TextView
+                    android:id="@+id/accounttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/bgcolor" />
+
+            <RelativeLayout
+                android:id="@+id/identity_authentication"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="实名认证"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <TextView
+                    android:id="@+id/status_authentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img3"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/go" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/bgcolor" />
+
+            <RelativeLayout
+                android:id="@+id/bank_card_management"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="银行卡管理"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <TextView
+                    android:id="@+id/bank_card_status_authentication"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img4"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <ImageView
+                    android:id="@+id/img4"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/go" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/modify_the_login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="修改登录密码"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/go" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/bgcolor" />
+
+            <RelativeLayout
+                android:id="@+id/modify_the_payment_password"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_setoer">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="14dp"
+                    android:text="修改支付密码"
+                    android:textColor="@color/not_selected"
+                    android:textSize="@dimen/sixteen" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/go" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/exit_sign"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/activity_register_rounded_button"
+                android:text="退出登录"
+                android:textColor="#fff"
+                android:textSize="@dimen/sixteen" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

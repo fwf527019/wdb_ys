@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/project_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="项目名"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sixteen" />
+
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="还款中"
+            android:textColor="@color/base_top"
+            android:textSize="@dimen/sixteen" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/bgcolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="借款金额"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/loan_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/sixteen" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="借款利率"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/borrowing_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/sixteen" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="借款期限"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/term_of_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/sixteen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="还款方式"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/repayment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/sixteen" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="借款时间"
+            android:textColor="@color/not_selected"
+            android:textSize="@dimen/sixteen" />
+
+        <TextView
+            android:id="@+id/repayment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv111"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/sixteen" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/bgcolor" />
+
+    <TextView
+        android:id="@+id/immediate_repayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fragment_my_loan_lv_item_shape"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:text="立即还款"
+        android:textColor="@color/red"
+        android:textSize="@dimen/sixteen"
+        android:visibility="gone" />
+
+</LinearLayout>

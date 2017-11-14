@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_right_tv" />
+
+    <EditText
+        android:id="@+id/nicknametv"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_edittext"
+        android:lines="1"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/not_selected"
+        android:textSize="@dimen/eighteen" />
+
+</LinearLayout>

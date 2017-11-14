@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_right_tv" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/real_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="真实姓名"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <rxh.hb.view.HPEditText
+                android:id="@+id/id_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="身份证号码"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/work_unit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="工作单位"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/work_unit_telephone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="单位电话"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <EditText
+                android:id="@+id/home_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="家庭住址"
+                android:padding="15dp"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/activity_register_rounded_button"
+                android:text="提交"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

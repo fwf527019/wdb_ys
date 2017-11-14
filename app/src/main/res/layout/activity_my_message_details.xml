@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_right_tv" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/atitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="标题"
+                android:textSize="@dimen/eighteen" />
+
+            <TextView
+                android:id="@+id/author_and_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:text="标题"
+                android:textColor="@color/not_selected"
+                android:textSize="@dimen/sixteen" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="文章还结合作者的科研工作经验，介绍了超声图象的图形测量原理和方法，包括对B型图象的距离、周长和面积三种基本测量以及对M型图象的距离、时间和速度进行测量。"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/fourteen" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
