@@ -10,8 +10,8 @@ android {
         applicationId "com.xiningmt.wdb"
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 8
-        versionName "2.4"
+        versionCode 9
+        versionName "2.5"
         multiDexEnabled true
     }
     packagingOptions {

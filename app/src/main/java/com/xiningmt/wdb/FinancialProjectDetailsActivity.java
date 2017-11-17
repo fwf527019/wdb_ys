@@ -1,31 +1,6 @@
 package com.xiningmt.wdb;
 
-import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.Request.Method;
-import com.android.volley.toolbox.JsonObjectRequest;
-
-import de.greenrobot.event.EventBus;
-import rxh.hb.base.BaseActivity;
-import rxh.hb.eventbusentity.CIAEntity;
-import rxh.hb.jsonbean.FinancialProjectDetailsActivityBean;
-import rxh.hb.utils.ChangeUtils;
-import rxh.hb.utils.CreatUrl;
-import rxh.hb.utils.JsonUtils;
-import rxh.hb.utils.ShowDialog;
-import rxh.hb.volley.util.VolleySingleton;
-
-import android.R.raw;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
@@ -37,22 +12,45 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.android.volley.Request.Method;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import butterknife.Bind;
+import de.greenrobot.event.EventBus;
+import rxh.hb.base.BaseActivity;
+import rxh.hb.eventbusentity.CIAEntity;
+import rxh.hb.jsonbean.FinancialProjectDetailsActivityBean;
+import rxh.hb.utils.ChangeUtils;
+import rxh.hb.utils.CreatUrl;
+import rxh.hb.utils.JsonUtils;
+import rxh.hb.volley.util.VolleySingleton;
 
 public class FinancialProjectDetailsActivity extends BaseActivity implements OnDismissListener {
+
 
     private ImageView back, calculation;
     private Button immediate_investment;
     private WebView project_overview;
+    private LinearLayout showCorporationLl;
     private TextView title, expected_annual, investment_introduction, financing_amount, product_type,
             guarantee_corporation, residual_amount, biaodedetails, xingyongdengji;
     private static TextView expected_return;
@@ -60,8 +58,8 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
     RequestQueue mRequestQueue;
     String ids, shengyujine, url;
     static String nianhuashouyi;
-    static int date=0;
-    private static int lintype=1;
+    static int date = 0;
+    private static int lintype = 1;
     static FinancialProjectDetailsActivityBean cbBean = new FinancialProjectDetailsActivityBean();
 
     private PopupWindow popupWindow;
@@ -107,6 +105,7 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
         biaodedetails = (TextView) findViewById(R.id.biaodedetails);
         xingyongdengji = (TextView) findViewById(R.id.xingyongdengji);
         back = (ImageView) findViewById(R.id.back);
+        showCorporationLl= (LinearLayout) findViewById(R.id.show_corporation_ll);
         back.setOnClickListener(this);
         calculation = (ImageView) findViewById(R.id.calculation);
         calculation.setOnClickListener(this);
@@ -124,6 +123,13 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
             biaodedetails.setText(cbBean.getMinimum() + "元起投 | 期限" + cbBean.getDeadline() + "天 | "
                     + gethuankuan(cbBean.getPaymenttype()));
         }
+
+        if (cbBean.getType().equals("3")) {
+            showCorporationLl.setVisibility(View.VISIBLE);
+        } else {
+            showCorporationLl.setVisibility(View.GONE);
+        }
+
         financing_amount.setText("融资金额:" + ChangeUtils.get_money(Double.valueOf(cbBean.getMoneys())) + "元");
         residual_amount.setText(ChangeUtils.get_mark_state(cbBean.getStage()));
         xingyongdengji.setText("信用等级" + ChangeUtils.get_credit_rating(cbBean.getCreditrating()));
@@ -136,9 +142,9 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
         // 担保公司
         content = "担保公司名称：" + cbBean.getName();
         content = content + "\n注册资金：" + cbBean.getCompanymoney() + "万元";
-        if(cbBean.getCompanycode()==null){
+        if (cbBean.getCompanycode() == null) {
             content = content + "\n组织机构代码：" + "无";
-        }else {
+        } else {
             content = content + "\n组织机构代码：" + cbBean.getCompanycode();
         }
 
@@ -150,8 +156,8 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
             }
         }
         guarantee_corporation.setText(content);
-        url=url.substring(1);
-         project_overview.loadUrl( new CreatUrl().getimg() + url  +"/" + ids);
+        url = url.substring(1);
+        project_overview.loadUrl(new CreatUrl().getimg() + url + "/" + ids);
         //防止直接跳到系统浏览器
 
         project_overview.setWebViewClient(new WebViewClient() {
@@ -223,8 +229,8 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
                         cbBean = JsonUtils.getBeans(response.toString());
 
                         nianhuashouyi = cbBean.getRate();
-                        lintype= Integer.parseInt(cbBean.getLinetype());
-                        date= Integer.parseInt(cbBean.getDeadline());
+                        lintype = Integer.parseInt(cbBean.getLinetype());
+                        date = Integer.parseInt(cbBean.getDeadline());
                         initdata();
                         initPopupWindow();
                         if (cbBean.getStage().equals("2")) {
@@ -233,10 +239,10 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
                             immediate_investment.setText("项目已完成");
                         }
 
-                        if(!cbBean.getStage().equals("5")){
+                        if (!cbBean.getStage().equals("5")) {
                             immediate_investment.setBackgroundResource(R.drawable.fragment_the_home_page_text_btn_bg_gry);
                             immediate_investment.setClickable(false);
-                        }else {
+                        } else {
                             immediate_investment.setBackgroundResource(R.drawable.fragment_the_home_page_text_btn_bg);
                             immediate_investment.setClickable(true);
                         }
@@ -267,7 +273,7 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
     }
 
     /**
-     * 初始化popupWindow
+     * 初始化popupWindow 计算器
      */
     private void initPopupWindow() {
         WindowManager wm = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
@@ -347,18 +353,17 @@ public class FinancialProjectDetailsActivity extends BaseActivity implements OnD
                             return;
                         }
                     }
-                    float end=0;
-                    if(lintype==1){
+                    float end = 0;
+                    if (lintype == 1) {
                         end = Float.parseFloat(investment_amount.getText().toString())
-                                * (Float.parseFloat(nianhuashouyi) / 100*date/365);
-                    }else if(lintype==2){
+                                * (Float.parseFloat(nianhuashouyi) / 100 * date / 365);
+                    } else if (lintype == 2) {
                         end = Float.parseFloat(investment_amount.getText().toString())
-                                * (Float.parseFloat(nianhuashouyi) / 100*date/12);
+                                * (Float.parseFloat(nianhuashouyi) / 100 * date / 12);
                     }
 
-
-
                     expected_return.setText(end + "");
+                    expected_return.setText(ChangeUtils.get_money((double) end));
                 } else {
                     expected_return.setText("");
                 }

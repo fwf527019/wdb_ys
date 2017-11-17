@@ -125,7 +125,10 @@ public class BankCardManagementActivity extends BaseActivity {
         Map<String, String> map = new HashMap<String, String>();
         map.put("nums",
                 bank_card_number.getText().toString().replaceAll(" +", ""));
+        map.put("num",
+                bank_card_number.getText().toString().replaceAll(" +", ""));
         map.put("name", bank_of_deposit.getText().toString());
+
         map.put("bname", name_of_Bank.getText().toString());
         map.put("phone", open_an_account.getText().toString());
         map.put("site", bank_address.getText().toString());

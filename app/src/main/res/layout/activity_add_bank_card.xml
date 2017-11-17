@@ -78,6 +78,10 @@
                 android:textColor="@color/not_selected"
                 android:textSize="@dimen/sixteen" />
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@color/bgcolor" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="15dp"

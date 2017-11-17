@@ -75,6 +75,7 @@
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="10dp"
+                android:visibility="gone"
                 android:background="@color/bgcolor" />
 
             <EditText
@@ -83,11 +84,13 @@
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="开户人姓名"
+                android:visibility="gone"
                 android:padding="15dp"
                 android:textColor="@color/not_selected"
                 android:textSize="@dimen/sixteen" />
 
             <View
+                android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="10dp"
                 android:background="@color/bgcolor" />
@@ -97,6 +100,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
+                android:visibility="gone"
                 android:hint="银行预留手机号"
                 android:inputType="number"
                 android:padding="15dp"
